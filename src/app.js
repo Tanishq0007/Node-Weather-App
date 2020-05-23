@@ -13,9 +13,10 @@ const viwesPaths = path.join(__dirname, '../templates/views')
 const partialPath = path.join(__dirname, '../templates/partials')
 
 // Setup handel bar engine and views location
-app.set('view engine','hbs')
-app.set('views',viwesPaths)
-hbs.registerPartials(partialPath)
+app.use(express.static(public))
+// app.set('view engine','hbs')
+// app.set('views',viwesPaths)
+// hbs.registerPartials(partialPath)
 
 // Setup static directory to serve
 app.use(express.static(public))
