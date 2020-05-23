@@ -9,7 +9,7 @@ weather_form.addEventListener('submit', (e) => {
     const location = search.value
     messageOne.textContent = 'Loading....'
     messageTwo.textContent = ''
-    fetch('http://localhost:3000/wheather?address='+ location).then((response) => {
+    fetch('/wheather?address='+ location).then((response) => {
     response.json().then((data) => {
         if (data.error) {
             messageOne.textContent = 'Location Not Found!! Try Again'
